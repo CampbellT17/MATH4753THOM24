@@ -5,7 +5,7 @@
 #' @param xlab x label
 #' @param ylab y label
 #'
-#' @return A sophistocated scatterplot with histogram
+#' @return A sophisticated scatterplot with histogram
 #' @export
 #'
 #' @examples
