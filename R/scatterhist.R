@@ -1,5 +1,8 @@
 #' @title Scatter Histogram
 #'
+#' @importFrom graphics layout hist par barplot mtext
+#' @importFrom grDevices rainbow
+#'
 #' @param x x variable as a vector
 #' @param y y variable as a vector
 #' @param xlab x label

@@ -1,0 +1,85 @@
+---
+title: "What the Package Does"
+author: Campbell Thomasson
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{What the Package Does}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(MATH4753THOM24)
+```
+
+# Introduction
+
+This package runs various functions designed in our labs we have worked through all semester.
+
+# Functions
+
+## myquad
+
+Runs the quadratic function x^2 - 5*x + 7 for a given value of x.
+```{r}
+myquad(5)
+```
+
+## scatterhist
+
+Returns a sophisticated scatterplot with histogram for variables in a dataset.
+```{r}
+scatterhist(fire$DAMAGE,fire$DISTANCE,xlab="DAMAGE",ylab="DISTANCE")
+```
+
+## mybin
+
+Creates a framework to run binomial distributions.
+```{r}
+mybin(iter=1000,n=18, p=0.3)
+```
+
+## myclt
+
+Creates a uniform distribution of the central limit theorem, given a set sample size and number of iterations.
+```{r}
+myclt(n=50,iter=10000)
+```
+
+## myboot2
+
+If the sample is of size n then the bootstrap re-sampling will create samples of size n with replacement. The following is a function that will facilitate the bootstrap procedure.
+```{r}
+sam = c(5,10,15,20,25)
+myboot2(iter=10000,x=sam,fun="mean",alpha=0.05,cx=1.5)
+```
+
+## ntickets
+
+This function finds the optimal number of tickets for an airline to sell in order to have a full flight (N seats filled), taking into account gamma risk of accidentally overbooking and p probability of a customer who buys a ticket actually showing up to the flight.
+```{r}
+ntickets(N=400,gamma=0.02,p=0.95)
+```
+
+## mymlnorm
+
+This function makes a maximum likelihood function for two parameters.
+```{r}
+mymlnorm(x=c(10,12,13,15,12,11,10),mu=seq(10,15,length=1000),sig=seq(0.1,4,length=1000),lwd=2,labcex=1)
+```
+
+# Data Sets
+
+## fire
+
+A data set collected concerning home damage from fire.
+```{r}
+fire
+```

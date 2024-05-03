@@ -10,5 +10,3 @@
 myquad <- function(x){
   x^2 - 5*x + 7
 }
-
-usethis::create_github_token()
